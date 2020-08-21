@@ -13,7 +13,10 @@ module.exports = {
   rules: {
     'indent': ['off', 2],
     'semi': 0,
-    'object-curly-spacing': ["error", "always"],
+    "object-curly-newline": ["error", {
+      "ObjectExpression": "always",
+      "ObjectPattern": { "multiline": true }
+    }],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
