@@ -44,22 +44,22 @@ export default {
      },
      methods: {
          // 点击重置按钮
-         resetLoginForm() {
+         resetLoginForm () {
              this.$refs.LoginFormRef.resetFields()
          },
-         login() {
+         login () {
              this.$refs.LoginFormRef.validate(async (valid) => {
-                 if (!valid) return;
+                 if (!valid) return
                  console.log(valid)
-                 const { data: res } = await this.$http.post('login', this.LoginForm);
-                 if (res.meta.status !== 200) return this.$message.error('登录失败！');
-                 this.$message.success('登录成功!');
+                 const { data: res } = await this.$http.post('login', this.LoginForm)
+                 if (res.meta.status !== 200) return this.$message.error('登录失败！')
+                 this.$message.success('登录成功!')
 
                  // 登录成功之后保存token,保存到客户端得sessionstorage中
                  window.sessionStorage.setItem('token', res.data.token)
                  // 登录成功跳转
                  this.$router.push('/home')
-             });
+             })
          }
      }
 }
