@@ -7,3 +7,16 @@ body,
     padding: 0;
     min-width: 1366px;
 }
+
+.el-breadcrumb{
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.el-card{
+    margin-top: 20px;
+}
+
+.el-pagination {
+    margin-top: 15px;
+}

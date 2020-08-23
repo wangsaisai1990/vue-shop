@@ -10,13 +10,16 @@
         <el-container>
             <el-aside :width=" isCollapse ? '64px' : '200px'">
                 <div class="toggle-button" @click="toggleCollapse">|||</div>
-                <el-menu background-color="#333744" text-color="#fff" unique-opened :collapse="isCollapse" :collapse-transition="false" router>
+                <el-menu background-color="#333744" text-color="#fff" unique-opened :collapse="isCollapse"
+                    :collapse-transition="false" router :default-active="activePath">
                     <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
                         <template slot="title">
                         <i :class="iconsObj[item.id]"></i>
                         <span>{{ item.authName}}</span>
                         </template>
-                        <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id">
+                        <!-- 二级菜单 -->
+                        <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children"
+                            :key="subItem.id" @click="saveNavState('/' + subItem.path)">
                             <i class="el-icon-menu"></i>
                             <span slot="title">{{ subItem.authName }}</span>
                         </el-menu-item>
@@ -41,11 +44,16 @@ export default {
                 '102': 'iconfont icon-danju',
                 '145': 'iconfont icon-baobiao'
             },
-            isCollapse: false
+            // 是否折叠
+            isCollapse: false,
+            // 被激活得链接
+            activePath: true
         }
     },
     created() {
         this.getMenuList()
+        //
+        this.activePath = window.sessionStorage.getItem('activePath')
     },
     methods: {
         logout() {
@@ -60,6 +68,10 @@ export default {
         },
         toggleCollapse() {
             this.isCollapse = !this.isCollapse;
+        },
+        saveNavState(activepath) {
+            window.sessionStorage.setItem('activePath', activepath)
+            this.activePath = activepath
         }
     }
 }
