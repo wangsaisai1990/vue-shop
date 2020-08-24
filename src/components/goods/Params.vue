@@ -31,7 +31,7 @@
           <!-- 动态参数表格 -->
           <el-table :data="manyTableData" border stripe>
             <!-- 展开行 -->
-            <el-table-column type="expand">
+            <el-table-column type="expand" label="展开">
               <template slot-scope="scope">
                 <!-- 循环渲染Tag标签 -->
                 <el-tag v-for="(item, i) in scope.row.attr_vals" :key="i" closable @close="handleClose(i, scope.row)">{{item}}</el-tag>
@@ -43,7 +43,7 @@
               </template>
             </el-table-column>
             <!-- 索引列 -->
-            <el-table-column type="index"></el-table-column>
+            <el-table-column type="index" label="序号"></el-table-column>
             <el-table-column label="参数名称" prop="attr_name"></el-table-column>
             <el-table-column label="操作">
               <template slot-scope="scope">
@@ -60,7 +60,7 @@
           <!-- 静态属性表格 -->
           <el-table :data="onlyTableData" border stripe>
             <!-- 展开行 -->
-            <el-table-column type="expand">
+            <el-table-column type="expand" label="展开">
               <template slot-scope="scope">
                 <!-- 循环渲染Tag标签 -->
                 <el-tag v-for="(item, i) in scope.row.attr_vals" :key="i" closable @close="handleClose(i, scope.row)">{{item}}</el-tag>
@@ -72,7 +72,7 @@
               </template>
             </el-table-column>
             <!-- 索引列 -->
-            <el-table-column type="index"></el-table-column>
+            <el-table-column type="index" label="序号"></el-table-column>
             <el-table-column label="属性名称" prop="attr_name"></el-table-column>
             <el-table-column label="操作">
               <template slot-scope="scope">
