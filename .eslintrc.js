@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'indent': ['off', 2],
     'semi': 0,
+    'camelcase': 0,
     "space-in-parens": ["off", "always"],
     "vue/no-unused-vars": 'off',
     "object-curly-newline": ["off", { "ObjectExpression": "always","ObjectPattern": { "multiline": true } }],
