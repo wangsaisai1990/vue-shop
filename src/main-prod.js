@@ -1,22 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/router'
-import './plugins/element.js'
+// import './plugins/element.js'
 import './assets/css/global.css'
 // 导入全局样式表
 import './assets/fonts/iconfont.css'
 import './router/directives.js';
 import TreeTable from 'vue-table-with-tree-grid'
+
 import axios from 'axios'
 // 导入富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
-// require styles 导入富文本编辑器对应的样式
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+// // require styles 导入富文本编辑器对应的样式
+// import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.snow.css'
+// import 'quill/dist/quill.bubble.css'
 
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+// import 'nprogress/nprogress.css'
 
 Vue.prototype.$http = axios
 Vue.component('tree-table', TreeTable)
