@@ -2,8 +2,8 @@
     <el-container class="home-container">
         <el-header>
             <div>
-                <img src="../assets/heima.png" alt="">
-                <span>欢迎来到王赛赛得管理系统</span>
+                <img src="../assets/me.png" alt="">
+                <span class="red">欢迎来到王赛赛得管理系统</span>
             </div>
             <el-button type="info" @click="logout">退出</el-button>
         </el-header>
@@ -81,7 +81,7 @@ export default {
         background-color: #373d41;
         display: flex;
         justify-content: space-between;
-        padding-left: 0;
+        padding-left: 20;
         align-items: center;
         > div {
             display: flex;
@@ -90,6 +90,10 @@ export default {
                 margin-left: 15px;
             }
         }
+    }
+
+    .red {
+        color:#fff
     }
 
     .el-aside {

@@ -1,8 +1,10 @@
 import Vue from 'vue'
+import Timeline from './timeline/index.js'
+import TimelineItem from './timeline-item/index.js'
 import {
      Button, Form, FormItem, Input, Message, Container, Header, Aside, Main, Menu, Submenu, MenuItemGroup, MenuItem, Breadcrumb,
  BreadcrumbItem, Card, Row, Col, Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox, Tag, Tree, Select, Option, Cascader, Alert, Tabs, TabPane,
- Step, Steps, Checkbox, CheckboxGroup, Upload, Timeline, TimelineItem
+ Step, Steps, Checkbox, CheckboxGroup, Upload
 } from 'element-ui'
 
 Vue.use(Button)
