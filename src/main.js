@@ -5,6 +5,7 @@ import './plugins/element.js'
 import './assets/css/global.css'
 // 导入全局样式表
 import './assets/fonts/iconfont.css'
+import './router/directives.js';
 
 import axios from 'axios'
 Vue.prototype.$http = axios

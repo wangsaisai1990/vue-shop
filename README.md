@@ -25,3 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### 完成用户列表功能
+
+### 操作记录
+### git checkout -b rights
+### git push -u origin rights
