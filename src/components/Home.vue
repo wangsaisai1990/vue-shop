@@ -3,7 +3,7 @@
         <el-header>
             <div>
                 <img src="../assets/me.png" alt="">
-                <span class="red">欢迎来到王赛赛得管理系统</span>
+                <span class="red">欢迎来到MY管理系统</span>
             </div>
             <el-button type="info" @click="logout">退出</el-button>
         </el-header>
